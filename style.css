@@ -4,7 +4,12 @@ header{
     width: 100%; 
 }
 
-
+html{
+    scroll-behavior: smooth;
+}
+.menu{
+    display: none;
+}
 header h1 {
     color:white;
     position: absolute;
@@ -51,4 +56,225 @@ header a:hover{
     color: white;
     font-size: 40px;
     margin: 20px;
+}
+.pricing{
+    padding: 60PX 0;
+    background-color: #f5f5f3;
+    text-align: center;
+}
+.pricing h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #3c3c4b;
+}
+.pricing table{
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    /* background-color: white; */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    line-height: 30px;
+}
+.pricing th,
+.pricing td{
+    padding: 16px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+}
+.pricing th{
+    background-color: bisque;
+}
+.pricing td{
+    background-color: rgba(146, 184, 84, 0.274);
+}
+.dropdown-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 175px;
+    width: 80%;
+    max-width: 1200px;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    flex-grow: 1;
+}
+
+.dropdown select,
+.dropdown input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.dropdown input {
+    flex-grow: 2;
+}
+
+.area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #a3a3b371;
+    align-items: center;
+    padding: 100px 180px 80px;
+}
+
+.area div {
+    width: 300px;
+    text-align: center;
+}
+
+.area img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.area h3 {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.area p {
+    font-size: 14px;
+    line-height: 1.6em;
+}
+.contact {
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3C3C4B;
+}
+
+.contact h2 {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #3C3C4B;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color: transparent;
+    /* 背景透明 */
+    color: white;
+    border: 2px solid white;
+    /* 白色邊框 */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact button:hover {
+    background-color: #2C2C3B;
+    color: white;
+    border: 2px solid white;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: none;
+    border-color: #E0E9A3;
+}
+/* 響應式設計語法 */
+@media screen and (max-width: 768px) {
+    header ul {
+        display: none;
+    }
+
+    header h1 {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .banner h2 {
+        font-size: 40px;
+    }
+
+    .menu {
+        display: block;
+        background-color: transparent;
+        color: white;
+        font-size: 35px;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .news {
+        flex-direction: column;
+    }
+
+    .news img {
+        width: 100%;
+    }
+
+    .info {
+        width: 100%;
+        padding: 40px 0;
+    }
+
+    .info h2 {
+        font-size: 30px;
+    }
+
+    .area {
+        flex-direction: column;
+        padding: 60px 0;
+    }
+
+    .area div {
+        margin-bottom: 30px;
+    }
+
+    .dropdown-container {
+        flex-direction: column;
+        gap: 10px;
+        width: 90%;
+    }
 }

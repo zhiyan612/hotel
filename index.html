@@ -6,41 +6,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Page</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
 </head>
 
 <body>
     <header>
+        <button class="menu">&#9776;</button>
         <!--h1~h6都是連結用 1是最大6是最小-->
         <h1>ZH訂房網站</h1>
         <nav>
             <!--註記-->
             <ul>
-                <li><a href="#">最新消息</a></li>
-                <li><a href="#">地區選擇</a></li>
-                <li><a href="#">了解更多</a></li>
-                <li><a href="#">關於我們</a></li>
-                <li><a href="#">好康優惠</a></li>
+                <li><a href="#banner">最新消息</a></li>
+                <li><a href="#area">各館介紹</a></li>
+                <li><a href="#pricing">房型價目表</a></li>
+                <li><a href="#contact-us">聯絡我們</a></li>
             </ul>
         </nav>
     </header>
     <!-- <main></main> -->
-    <manin>
-        <section class="banner">
-            <h2>新竹地區</h2>
-            <p style="color: aliceblue;">早安</p>
+    <main>
+        <section class="banner" id="banner">
+            <h2>從繁忙的工作中脫離</h2>
+            <p style="color: rgb(199, 207, 214);">早安!放鬆之旅</p>
+            <div class="dropdown-container">
+                <div class="dropdown">
+                    <select>
+                        <option value="0">選擇類別</option>
+                        <option value="1">台北八德館</option>
+                        <option value="2">信義三館</option>
+                        <option value="3">台中站前館</option>
+                    </select>
+                </div>
+                <div class="dropdown">
+                    <input type="date" value="2024-07-11">
+                </div>
+                <div class="dropdown">
+                    <input type="date" value="2024-07-12">
+                </div>
+                <div class="dropdown">
+                    <select>
+                        <option value="2-0">2位成人，0位孩子，1間房</option>
+                        <option value="2-1">2位成人，1位孩子，1間房</option>
+                        <option value="2-2">2位成人，2位孩子，1間房</option>
+                    </select>
+                </div>
+                <button class="search-button">搜尋</button>
+            </div>
         </section>
-        
+        <section class="area" id="area">
+            <div>
+                <img src="images/hotel1.png" alt="台北八德館">
+                <h3>台北八德館</h3>
+                <p>位於台北八德...</p>
+            </div>
+            <div>
+                <img src="images/hotel2.png" alt="信義三館">
+                <h3>信義三館</h3>
+                <p>位於台北信義...</p>
+            </div>
+            <div>
+                <img src="images/hotel3.png" alt="台中站前館">
+                <h3>台中站前館</h3>
+                <p>位於台中站前...</p>
+            </div>
+        </section>
+        <section class="pricing" id="pricing">
+            <h2>房型價目表</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>房型</th>
+                        <th>定價</th>
+                        <th>平日</th>
+                        <th>假日</th>
+                        <th>床型</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>標準套房</td>
+                        <td>8,000</td>
+                        <td>5,200</td>
+                        <td>6,800</td>
+                        <td>(一大床/兩單床)</td>
+                    </tr>
+                    <tr>
+                        <td>豪華套房</td>
+                        <td>8,800</td>
+                        <td>5,720</td>
+                        <td>7,480</td>
+                        <td>(一大床/兩單床)</td>
+                    </tr>
+                    <tr>
+                        <td>標準湯房</td>
+                        <td>9,600</td>
+                        <td>6,240</td>
+                        <td>8,160</td>
+                        <td>(一大床/兩單床)</td>
+                    </tr>
+                    <tr>
+                        <td>洋式四人房</td>
+                        <td rowspan="2">11,000</td>
+                        <td>7,125</td>
+                        <td>9,350</td>
+                        <td>(兩大床/四單床)</td>
+                    </tr>
+                    <tr>
+                        <td>和式四人房</td>
+                        <td>7,800</td>
+                        <td>10,200</td>
+                        <td>(和式軟墊)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+        <section class="contact" id="contact-us">
+            <h2>聯絡我們</h2>
+            <p style="color: white;">遇到任何問題嗎?發送消息給我們，我們會盡快回復您!</p>
+            <form>
+                <input type="text" name="full_name" placeholder="全名" required>
+                <input type="email" name="email" placeholder="電子郵件地址" required>
+                <input type="tell" name="phone" placeholder="電話號碼" required>
+                <textarea name="message" placeholder="留言" required></textarea>
+                <button type="submit">送出</button>
+            </form>
+        </section>
         <!-- 圖片導入程式碼
         <img src="images/banner.png" alt="這是圖片" title="旅館" width="600px" height="300">
         連結導入程式碼
         <a href="https://www.google.com">
             <img src="images/banner.png" alt="這是圖片" title="旅館" width="600px" height="300">
         </a> -->
-        <hr>
-        <!-- <footer></footer> -->
-        <footer>
-            <p>Copyright© 2024 by ZH訂房網站 All Rights Reserved</p>
-        </footer>
+    </main>
+    <hr>
+    <!-- <footer></footer> -->
+    <footer>
+        <p>Copyright© 2024 by ZH訂房網站 All Rights Reserved</p>
+    </footer>
+    <script>
+        document.querySelectorAll('a.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
